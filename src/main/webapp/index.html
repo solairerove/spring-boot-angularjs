@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="woodstock">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Woodstock</title>
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- inject:css -->
+    <link rel="stylesheet" href="resources/vendor/css/lib.min.css">
+    <link rel="stylesheet" href="resources/css/style.css">
+    <!-- endinject -->
+</head>
+
+<body>
+<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header has-drawer is-upgraded">
+    <!-- Header -->
+    <div class="woodstock-header mdl-layout__header">
+        <div class="mdl-layout__header-row">
+            <!-- Title -->
+            <span class="woodstock-title mdl-layout-title">
+                <img class="woodstock-logo-image" src="resources/img/logo.png">
+            </span>
+            <!-- Spacer -->
+            <div class="mdl-layout-spacer"></div>
+            <!-- Navigation -->
+            <div class="woodstock-navigation-container">
+                <nav class="woodstock-navigation mdl-navigation">
+                    <a class="mdl-navigation__link mdl-typography--text-uppercase" href="#/">Home</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu -->
+    <div class="woodstock-drawer mdl-layout__drawer">
+        <!-- Navigation -->
+        <nav class="mdl-navigation">
+            <a class="mdl-navigation__link" href="#/">Home</a>
+        </nav>
+    </div>
+
+    <!-- Main -->
+    <div class="mdl-layout__content">
+        <div class="woodstock-content">
+            <ng-view></ng-view>
+        </div>
+    </div>
+
+    <div class="mdl-layout-spacer"></div>
+
+    <!-- Footer -->
+    <footer class="woodstock-footer mdl-mini-footer">
+        <div class="mdl-mini-footer__left-section">
+            <ul class="mdl-mini-footer__link-list">
+                <li><a class="woodstock-link" href="#/">Help</a></li>
+                <li><a class="woodstock-link" href="#/">Privacy & Terms</a></li>
+            </ul>
+        </div>
+    </footer>
+</div>
+</body>
+
+<!-- inject:js -->
+<script src="resources/vendor/js/lib.min.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/route.js"></script>
+<script src="app/service/model.service.js"></script>
+<script src="app/components/model/model.controller.js"></script>
+<!-- endinject -->
+</html>
